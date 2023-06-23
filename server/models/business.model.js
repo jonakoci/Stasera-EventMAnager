@@ -1,9 +1,11 @@
+const mongoose = require('mongoose');
+
 const BusinessSchema = new mongoose.Schema({
-    business_name: {String, required:[true,"Name is required"]},
-    email: {String, required:[true,"Name is required"]},
-    password: {String, required:[true,"Name is required"]},
-    phone: {Number, required:[true,"Name is required"]},
-    address:{String, required:[true,"Name is required"]},
+    business_name: {type: String, required:[true,"Name is required"]},
+    email: {type: String, required:[true,"Name is required"]},
+    password: {type: String, required:[true,"Name is required"]},
+    phone: {type: Number, required:[true,"Name is required"]},
+    address:{type: String, required:[true,"Name is required"]},
 }
 ,{ timestamps: true });
 

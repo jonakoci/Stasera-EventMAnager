@@ -21,11 +21,12 @@ module.exports.getOneEvent =(req, res)=>{
 };
 
 module.exports.getAllEvents = (req, res) => {
-        Event.find({}).sort({date:-1}) 
-    // could be date and not id in the sort 
-        .then(pirates => {
-            console.log(pirates); 
-            res.json(pirates);
+        // Event.find({}).sort({date:-1}) 
+        // could be date or id in the sort 
+        Event.find()
+        .then(events => {
+            console.log(events); 
+            res.json(events);
         })
         .catch(err => {
             console.log(err)
