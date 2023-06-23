@@ -6,12 +6,12 @@ import { useNavigate, Link } from "react-router-dom";
 
 function Welcome() {
   // const navigate = useNavigate();
-  
+
   return (
     <div>
       <div class="page-header min-vh-100">
             <div className="oblique position-absolute top-0 h-100 d-md-block d-none">
-                <div className="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6" style={{backgroundImage:`url(${backgroundImage})`}}> <p>hello</p> </div>
+                <div className="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6" style={{backgroundImage:`url(${backgroundImage})`}}></div>
             </div>
             <div className="container">
                 <div className="row">
