@@ -4,6 +4,7 @@ import backgroundImage from '../images/welcome.jpeg'
 import { useNavigate, Link } from "react-router-dom";
 
 
+
 function Welcome() {
   // const navigate = useNavigate();
 
@@ -20,7 +21,7 @@ function Welcome() {
                         <h1 className="mb-4">Party with US!</h1>
                         <p className="lead pe-5 me-5 font-italic">"Explore the vibrant world of club events, book your coveted table, and let the night unfold effortlessly."</p>
                         <div className="buttons">
-                            <button type="button" className="btn bg-gradient-primary m-4" >Party Animal</button>
+                            <Link to={'/user/authenticate'}> <button type="button" className="btn bg-gradient-primary m-4" >Party Animal</button> </Link>
                             <button type="button" className="btn m-4 btn-warning" >Business</button>
                         </div>
                     </div>
