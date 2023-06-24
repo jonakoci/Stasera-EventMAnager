@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 function UserLog() {
     const [email, setEmail]= useState("");
     const [password, setPassword]= useState("");
+    const [validation, setValidation] = useState()
+
     // const navigate = useNavigate()
 
 
@@ -18,7 +20,8 @@ function UserLog() {
             // navigate ("/pirates")
         })
         .catch((err)=>{
-            alert(err.response.data.error)
+            console.log(err.response.data.error)
+            setValidation(err.response.data.error);
         })
     }
 
@@ -27,24 +30,28 @@ function UserLog() {
   return (
     <div>
         <div>
-            <div class="container">
-                <div class="row d-flex justify-content-center align-items-center">
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body p-5">
-                                <h2 class="text-uppercase text-center mb-5">Login</h2>
+            <div className="container">
+                <div className="row d-flex justify-content-center align-items-center">
+                    <div className="col">
+                        <div className="card">
+                            <div className="card-body p-5">
+                                <h2 className="text-uppercase text-center mb-5">Login</h2>
                                 <form>
-                                    <div class="form-outline mb-4">
-                                        <input type="email"  class="form-control form-control-lg" onChange = {(e)=>setEmail(e.target.value)} />
-                                        <label class="form-label">Your Email</label>
+                                    <div className="form-outline mb-4">
+                                        <input type="email"  className="form-control form-control-lg" onChange = {(e)=>setEmail(e.target.value)} />
+                                        <label className="form-label"> Email</label> 
+                                        {/* <p style={{color:"red"}}>{ validation.email? validation.email.message : ""}</p> */}
+
                                     </div>
 
-                                    <div class="form-outline mb-4">
-                                        <input type="password" class="form-control form-control-lg" onChange = {(e)=>setPassword(e.target.value)}/>
-                                        <label class="form-label">Password</label>
+                                    <div className="form-outline mb-4">
+                                        <input type="password" className="form-control form-control-lg" onChange = {(e)=>setPassword(e.target.value)}/>
+                                        <label className="form-label">Password</label> <br />
+                                        <p style={{color:"red"}}>{ validation? validation : ""}</p>
+
                                     </div>
-                                    <div class="d-flex justify-content-center">
-                                        <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" onClick={loginUser}>Login</button>
+                                    <div className="d-flex justify-content-center">
+                                        <button type="button" className="btn btn-success btn-block btn-lg gradient-custom-4 text-body" onClick={loginUser}>Login</button>
                                     </div>
                                 </form>
                             </div>

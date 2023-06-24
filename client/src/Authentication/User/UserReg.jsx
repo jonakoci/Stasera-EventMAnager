@@ -2,17 +2,19 @@ import React, {useState} from 'react';
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 
+
 function UserReg() {
     // const navigate = useNavigate()
-    const [name, setName]= useState("");
-    const [userName, setUserName]= useState("");
+    const [fullName, setFullName]= useState("");
+    const [username, setUsername]= useState("");
     const [email, setEmail]= useState("");
     const [password, setPassword]= useState("");
+    const [validation, setValidation] = useState({})
 
     const registerUser = () =>{
         axios.post("http://localhost:8000/user/create", {
-            name,
-            userName,
+            fullName,
+            username,
             email,
             password
         })
@@ -21,37 +23,41 @@ function UserReg() {
             // navigate ("/")
         })
         .catch((err)=>{
-            // alert("Please revise all fields")
             console.log (err.response.data)
+            setValidation(err.response.data.err.errors);
         })
     }
 
     return (
         <div>
-            <div class="container">
-                <div class="row d-flex justify-content-center align-items-center">
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body p-5">
-                                <h2 class="text-uppercase text-center mb-5">Register</h2>
+            <div className="container">
+                <div className="row d-flex justify-content-center align-items-center">
+                    <div className="col">
+                        <div className="card">
+                            <div className="card-body p-5">
+                                <h2 className="text-uppercase text-center mb-5">Register</h2>
                                 <form>
-                                    <div class="form-outline mb-4">
-                                        <input type="text"  class="form-control form-control-lg" onChange = {(e)=>setName(e.target.value)}/>
-                                        <label class="form-label" >Full Name</label>
+                                    <div className="form-outline mb-4">
+                                        <input type="text"  className="form-control form-control-lg" onChange = {(e)=>setFullName(e.target.value)}/>
+                                        <label className="form-label" >Full Name</label> <br />
+                                        <p style={{color:"red"}}>{ validation.fullName? validation.fullName.message : ""}</p>
                                     </div>
-                                    <div class="form-outline mb-4">
-                                        <input type="text"  class="form-control form-control-lg" onChange = {(e)=>setUserName(e.target.value)}/>
-                                        <label class="form-label" >User Name</label>
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <input type="email"  class="form-control form-control-lg" onChange = {(e)=>setEmail(e.target.value)} />
-                                        <label class="form-label">Your Email</label>
+                                    <div className="form-outline mb-4">
+                                        <input type="text"  className="form-control form-control-lg" onChange = {(e)=>setUsername(e.target.value)}/>
+                                        <label className="form-label" >User Name</label> <br />
+                                        <p style={{color:"red"}}>{ validation.username? validation.username.message : ""}</p>
                                     </div>
 
-                                    <div class="form-outline mb-4">
-                                        <input type="password" class="form-control form-control-lg" onChange = {(e)=>setPassword(e.target.value)}/>
-                                        <label class="form-label">Password</label>
+                                    <div className="form-outline mb-4">
+                                        <input type="email"  className="form-control form-control-lg" onChange = {(e)=>setEmail(e.target.value)} />
+                                        <label className="form-label">Email</label> <br />
+                                        <p style={{color:"red"}}>{ validation.email? validation.email.message : ""}</p>
+                                    </div>
+
+                                    <div className="form-outline mb-4">
+                                        <input type="password" className="form-control form-control-lg" onChange = {(e)=>setPassword(e.target.value)}/>
+                                        <label className="form-label">Password</label> <br />
+                                        <p style={{color:"red"}}>{ validation.password? validation.password.message : ""}</p>
                                     </div>
 
                                     {/* <div class="form-outline mb-4">
@@ -59,8 +65,8 @@ function UserReg() {
                                         <label class="form-label" >Repeat your password</label>
                                     </div> */}
 
-                                    <div class="d-flex justify-content-center">
-                                        <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" onClick={registerUser}>Register</button>
+                                    <div className="d-flex justify-content-center">
+                                        <button type="button" className="btn btn-success btn-block btn-lg gradient-custom-4 text-body" onClick={registerUser}>Register</button>
                                     </div>
                                 </form>
                             </div>
