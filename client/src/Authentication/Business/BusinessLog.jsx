@@ -7,8 +7,7 @@ function BusinessLog() {
     const [email, setEmail]= useState("");
     const [password, setPassword]= useState("");
     const [validation, setValidation] = useState()
-
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
 
     const loginBusiness = () =>{
@@ -17,7 +16,7 @@ function BusinessLog() {
             password
         })
         .then ((res)=>{
-            // navigate ("/home")
+            navigate ("/dashboard")
             console.log(res)
         })
         .catch((err)=>{

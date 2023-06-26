@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 function BusinessReg() {
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
     const [businessName, setBusinessName]= useState("");
     const [email, setEmail]= useState("");
     const [phoneNr, setPhoneNr]= useState("");
@@ -22,7 +22,7 @@ function BusinessReg() {
         })
         .then ((res)=>{
             console.log(res.data)
-            // navigate ("/")
+            navigate ("/dashboard")
         })
         .catch((err)=>{
             console.log (err.response.data)

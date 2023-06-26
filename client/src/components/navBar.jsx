@@ -1,6 +1,5 @@
 import React from 'react'
-import { useNavigate, Link } from "react-router-dom";
-import axios from 'axios';
+import { Link } from "react-router-dom";
 // import '../styles/theme.css'
 
 function NavBar() {
@@ -12,7 +11,7 @@ function NavBar() {
                     <div class="w-100 pt-3 pb-2 ms-lg-12 " id="navigation">
                         <ul class="navbar-nav w-100 gap-6">
                             <li class="nav-item mx-2">
-                                <h2 class="nav-link ps-2 d-flex align-items-center">Home</h2> 
+                                <Link to={'/dashboard'}><h2 class="nav-link ps-2 d-flex align-items-center">Home</h2></Link>  
                             </li>
                             <li class="nav-item dropdown dropdown-hover mx-2">
                                 <h2 class="nav-link ps-2 d-flex align-items-center">Contact Us</h2> 
@@ -24,7 +23,7 @@ function NavBar() {
                                 <h2 class="nav-link ps-2 d-flex align-items-center">About Us</h2> 
                             </ li>
                             <li class="nav-item ms-lg-auto my-auto ms-3 ms-lg-0 mt-2 mt-lg-0"> 
-                            <button class="btn btn-sm  bg-gradient-primary  btn-round mb-0 me-1 mt-2 mt-md-0">New Event</button>
+                            <Link to={'/create/event'} ><button class="btn btn-sm bg-gradient-primary btn-round mb-0 me-1 mt-2 mt-md-0">New Event</button></Link> 
                             </li>
                         </ul>
                     </div>
