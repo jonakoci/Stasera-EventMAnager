@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 function UserReg() {
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
     const [fullName, setFullName]= useState("");
     const [username, setUsername]= useState("");
     const [email, setEmail]= useState("");
@@ -20,7 +20,7 @@ function UserReg() {
         })
         .then ((res)=>{
             console.log(res.data)
-            // navigate ("/")
+            navigate ("/dashboard")
         })
         .catch((err)=>{
             console.log (err.response.data)
