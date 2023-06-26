@@ -17,7 +17,7 @@ function UserLog() {
             password
         })
         .then ((res)=>{
-            // navigate ("/pirates")
+            // navigate ("/home")
         })
         .catch((err)=>{
             console.log(err.response.data.error)

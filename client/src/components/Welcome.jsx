@@ -22,7 +22,7 @@ function Welcome() {
                         <p className="lead pe-5 me-5 font-italic">"Explore the vibrant world of club events, book your coveted table, and let the night unfold effortlessly."</p>
                         <div className="buttons">
                             <Link to={'/user/authenticate'}> <button type="button" className="btn bg-gradient-primary m-4" >Party Animal</button> </Link>
-                            <button type="button" className="btn m-4 btn-warning" >Business</button>
+                            <Link to={'/business/authenticate'} > <button type="button" className="btn m-4 btn-warning" >Business</button> </Link> 
                         </div>
                     </div>
                 </div>
