@@ -1,4 +1,4 @@
-import './App.css';
+
 import Welcome from './components/Welcome';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import UserAuth from './Authentication/User/UserAuth';

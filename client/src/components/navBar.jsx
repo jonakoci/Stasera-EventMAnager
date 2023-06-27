@@ -17,10 +17,10 @@ function NavBar() {
                                 <h2 class="nav-link ps-2 d-flex align-items-center">Contact Us</h2> 
                             </ li>
                             <li class="nav-item dropdown dropdown-hover mx-2">
-                                <h2 class="nav-link ps-2 d-flex align-items-center">Logout</h2> 
+                                <h2 class="nav-link ps-2 d-flex align-items-center">About Us</h2> 
                             </ li>
                             <li class="nav-item dropdown dropdown-hover mx-2">
-                                <h2 class="nav-link ps-2 d-flex align-items-center">About Us</h2> 
+                                <h2 class="nav-link ps-2 d-flex align-items-center">Logout</h2> 
                             </ li>
                             <li class="nav-item ms-lg-auto my-auto ms-3 ms-lg-0 mt-2 mt-lg-0"> 
                             <Link to={'/create/event'} ><button class="btn btn-sm bg-gradient-primary btn-round mb-0 me-1 mt-2 mt-md-0">New Event</button></Link> 

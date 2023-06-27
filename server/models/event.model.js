@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 const EventSchema = new mongoose.Schema({
-        title: {type: String, required:[true,"Name is required"]},
+        title: {type: String, required:[true,"Title is required"]},
         imageUrl: {type: String, required:[true,"Image is required"]},
-        date: { type : String, required:[true,"Date and Time are required"]},
-        guests: {type: String,required:[true,"Date and Time are required"]},
-        price: {type: String, required:[true,"Date and Time are required"]}
+        date: { type : Date, required:[true,"This field is required"]},
+        guests: {type: String,required:[true,"This field is required"]},
+        price: {type: String, required:[true,"This field is required"]}
     },  
 { timestamps: true });
 
