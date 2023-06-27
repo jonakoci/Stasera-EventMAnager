@@ -13,7 +13,7 @@ function Edit(props) {
     const [price, setPrice] = useState("");
 
     useEffect(()=>{
-        axios.get(`http://localhost:8000/event/${id}` ,{withCredentials: true})
+        axios.get(`http://localhost:8000/event/${id}`)
         .then (res=> {
           console.log (res.data)
           setTitle(res.data.title)
@@ -22,13 +22,13 @@ function Edit(props) {
           setGuests(res.data.guests)
           setPrice(res.data.price)
         })
-        .catch(err=>console.log(err))
+        .catch(err=>console.log("errrrrrr"+err))
     
       }, [update])
 
       const handleSubmit = (e)=>{
         e.preventDefault();
-        axios.put(`http://localhost:8000/event/${id}`, {withCredentials: true} ,{
+        axios.put(`http://localhost:8000/event/${id}` ,{
         title, 
         imageUrl,
         date,

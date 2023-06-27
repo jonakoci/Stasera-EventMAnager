@@ -14,10 +14,10 @@ function NavBar() {
                                 <Link to={'/dashboard'}><h2 class="nav-link ps-2 d-flex align-items-center">Home</h2></Link>  
                             </li>
                             <li class="nav-item dropdown dropdown-hover mx-2">
-                                <h2 class="nav-link ps-2 d-flex align-items-center">Contact Us</h2> 
+                                <Link to={'/contact'} > <h2 class="nav-link ps-2 d-flex align-items-center">Contact Us</h2> </Link>
                             </ li>
                             <li class="nav-item dropdown dropdown-hover mx-2">
-                                <h2 class="nav-link ps-2 d-flex align-items-center">About Us</h2> 
+                                <Link to={'/about'} > <h2 class="nav-link ps-2 d-flex align-items-center">About Us</h2> </Link>
                             </ li>
                             <li class="nav-item dropdown dropdown-hover mx-2">
                                 <h2 class="nav-link ps-2 d-flex align-items-center">Logout</h2> 

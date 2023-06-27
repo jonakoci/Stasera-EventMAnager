@@ -9,6 +9,8 @@ import {useState} from 'react'
 import Dashboard from './components/Dashboard';
 import CreateEvent from './components/CreateEvent';
 import Edit from './components/Edit';
+import About from './components/About';
+import Contact from './components/Contact';
 
 function App() {
 const [update, setUpdate]=useState([]);
@@ -35,10 +37,24 @@ const [update, setUpdate]=useState([]);
               <Footer />
             </>
             } />
-              <Route path='/edit/:id' element={ 
+              <Route path='/event/:id' element={ 
             <>
               <NavBar />
               <Edit update={update} setUpdate={setUpdate} /> 
+              <Footer />
+            </>
+            } />
+              <Route path='/about' element={ 
+            <>
+              <NavBar />
+              <About  /> 
+              <Footer />
+            </>
+            } />
+              <Route path='/contact' element={ 
+            <>
+              <NavBar />
+              <Contact  /> 
               <Footer />
             </>
             } />

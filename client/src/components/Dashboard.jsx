@@ -34,7 +34,7 @@ function Dashboard(props) {
                                     <p> Special Guests: {event.guests} </p>
                                     <p> Entry: {event.price} </p>
                                     <button type="button" className="btn bg-gradient-primary m-4">Book</button>
-                                    <Link to={'/edit/:id'}> <button type="button" className="btn bg-gradient-primary m-4">Edit</button> </Link>
+                                    <Link to={`/event/${event._id}`}> <button type="button" className="btn bg-gradient-primary m-4">Edit</button> </Link>
                                 </div>
                                 </div>
                             </div>

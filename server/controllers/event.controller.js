@@ -11,11 +11,12 @@ module.exports.createEvent=(req, res) =>{
 };
 
 module.exports.getOneEvent =(req, res)=>{
-   Event.findOne ({_id:req.params.id})
+    Event.findOne ({_id:req.params.id})
     .then ((event)=>{
-        res.json(event)
+      return res.json(event)
     })
     .catch((err) => {
+        console.log(err)
         res.json({ err });
       });
 };
@@ -35,9 +36,7 @@ module.exports.getAllEvents = (req, res) => {
 }; 
 
 module.exports.updateEvent = (req, res)=>{
-    Event.findOneAndUpdate({_id:req.params.id}, req.body, {   
-        new: true,
-        runValidators: true})
+    Event.findOneAndUpdate({_id:req.params.id}, req.body)
     .then((updatedEvent)=>{
         res.json(updatedEvent)
     })
