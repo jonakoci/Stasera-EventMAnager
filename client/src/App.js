@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import {useState} from 'react'
 import Dashboard from './components/Dashboard';
 import CreateEvent from './components/CreateEvent';
+import Edit from './components/Edit';
 
 function App() {
 const [update, setUpdate]=useState([]);
@@ -31,6 +32,13 @@ const [update, setUpdate]=useState([]);
             <>
               <NavBar />
               <CreateEvent update={update} setUpdate={setUpdate} /> 
+              <Footer />
+            </>
+            } />
+              <Route path='/edit/:id' element={ 
+            <>
+              <NavBar />
+              <Edit update={update} setUpdate={setUpdate} /> 
               <Footer />
             </>
             } />
