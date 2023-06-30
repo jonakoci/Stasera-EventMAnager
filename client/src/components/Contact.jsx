@@ -1,6 +1,14 @@
 import React from 'react'
+import { useNavigate} from 'react-router-dom'
 
 function Contact() {
+    const navigate = useNavigate()
+
+    const handleSubmit =()=>{
+        alert("Thank You for your message")
+        navigate('/dashboard')
+    }
+
   return (
     <div>
       <section class="py-5">
@@ -10,7 +18,7 @@ function Contact() {
                     <div class="ms-3 mb-md-5">
                         <h3>Contact us</h3>
                         <p>
-                            For further questions, including partnership opportunities, please email hello@creative-tim.com
+                            For further questions, including partnership opportunities, please email hello@stasera.com
                             or contact using our contact form.
                         </p>
                     </div>
@@ -31,7 +39,7 @@ function Contact() {
                                     <div class="col-md-6 ps-md-2">
                                         <label>Email</label>
                                         <div class="input-group">
-                                            <input type="email" class="form-control" placeholder="hello@creative-tim.com" />
+                                            <input type="email" class="form-control" placeholder="hello@stasera.com" />
                                         </div>
                                     </div>
                                 </div>
@@ -41,7 +49,7 @@ function Contact() {
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 text-center">
-                                        <button type="submit" class="btn bg-gradient-primary mt-4">Send Message</button>
+                                        <button type="submit" class="btn bg-gradient-primary mt-4" onClick={handleSubmit}>Send Message</button>
                                     </div>
                                 </div>
                             </div>

@@ -9,10 +9,7 @@ function About() {
                 <div class="col-lg-6">
                     <h3 class="text-gradient text-primary mb-0 mt-2">Read More About Us</h3>
                     <h3>The most important</h3>
-                    <p>Pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand.</p>
-                    <a href="javascript:;" class="text-primary icon-move-right">More about us
-                        <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                    </a>
+                    <p>NightBuzz is your go-to platform for discovering <br /> and promoting the hottest happenings in town.</p>
                 </div>
                 <div class="col-lg-6 mt-lg-0 mt-5 ps-lg-0 ps-0">
                     <div class="p-3 info-horizontal">
@@ -20,7 +17,7 @@ function About() {
                             <i class="fas fa-ship opacity-10" aria-hidden="true"></i>
                         </div>
                         <div class="description ps-3">
-                            <p class="mb-0">It becomes harder for us to give others a hand. <br /> We get our heart broken by people we love.</p>
+                            <p class="mb-0">Easily explore a wide range of electrifying events. <br />Ensuring there's something for everyone. </p>
                         </div>
                     </div>
 
@@ -29,7 +26,7 @@ function About() {
                             <i class="fas fa-handshake opacity-10" aria-hidden="true"></i>
                         </div>
                         <div class="description ps-3">
-                            <p class="mb-0">As we live, our hearts turn colder. <br />Cause pain is what we go through as we become older.</p>
+                            <p class="mb-0">Browse through various categories, including concerts, DJ sets, bar specials, and themed parties </p>
                         </div>
                     </div>
                     <div class="p-3 info-horizontal">
@@ -37,7 +34,7 @@ function About() {
                             <i class="fas fa-hourglass opacity-10" aria-hidden="true"></i>
                         </div>
                         <div class="description ps-3">
-                            <p class="mb-0">When we lose family over time. <br /> What else could rust the heart more over time? Blackgold.</p>
+                            <p class="mb-0"> Interact with fellow enthusiasts, share your experiences, and even collaborate on organizing your own events. <br /></p>
                         </div>
                     </div>
                 </div>
@@ -48,35 +45,33 @@ function About() {
         <div class="container">
             <div class="row">
                 <div class="col-8 mx-auto text-center mb-5">
-                    <span class="badge rounded-pill bg-primary mb-2">Co-working</span>
-                    <h2>Explore our places in London </h2>
+                    <span class="badge rounded-pill bg-primary mb-2">Stasera</span>
+                    <h2>Explore our places in Albania </h2>
                     <p>
-                        If you can't decide, the answer is no. If two equally difficult paths,
-                        choose the one more painful in the short term (pain avoidance
-                        is creating an illusion of equality).
+                    Stay connected with the buzzing nightlife community by creating your personalized profile on Stasera. Get notified about exclusive offers, VIP access, and limited-time promotions, ensuring you're always in the know.
                     </p>
                 </div>
             </div>
             <div class="row min-vh-25">
                 <div class="col-sm-4 col-5 mb-sm-0 mb-3">
-                    <div style={{backgroundImage: "url('https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/nastuh.jpg')"}} class="w-100 h-100 border-radius-lg bg-cover"></div>
+                    <div style={{backgroundImage: "url('https://res.cloudinary.com/electronic-beats/c_fit,q_auto,f_auto,w_1920/stage/uploads/2016/09/Folie-Terrace.jpg')"}} class="w-100 h-100 border-radius-lg bg-cover"></div>
                 </div>
                 <div class="col-sm-3 col-7 mb-sm-0 mb-3">
-                    <div style={{backgroundImage: "url('https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/nastuh.jpg')"}} class="w-100 h-100 border-radius-lg bg-cover"></div>
+                    <div style={{backgroundImage: "url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/58/30/c0/light-show.jpg?w=1200&h=-1&s=1')"}} class="w-100 h-100 border-radius-lg bg-cover"></div>
                 </div>
                 <div class="col-sm-5 mb-sm-0 mb-3">
-                    <div style={{backgroundImage: "url('https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/nastuh.jpg')"}} class="w-100 h-100 border-radius-lg bg-cover"></div>
+                    <div style={{backgroundImage: "url('https://10619-2.s.cdn12.com/rests/original/106_529663004.jpg')"}} class="w-100 h-100 border-radius-lg bg-cover"></div>
                 </div>
             </div>
-            <div class="row min-vh-25 mt-4">
+            <div class="row min-vh-45 mt-4">
                 <div class="col-sm-3 col-7 mb-sm-0 mb-3">
-                    <div style={{backgroundImage: "url('https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/nastuh.jpg')"}} class="w-100 h-100 border-radius-lg bg-cover"></div>
+                    <div style={{backgroundImage: "url('https://www.nightlife-cityguide.com/wp-content/uploads/2017/03/discoteche-a-Saranda-Mango-Club-580x387.jpg')"}} class="w-100 h-100 border-radius-lg bg-cover"></div>
                 </div>
                 <div class="col-sm-5 col-5 mb-sm-0 mb-3">
-                    <div style={{backgroundImage: "url('https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/nastuh.jpg')"}} class="w-100 h-100 border-radius-lg bg-cover"></div>
+                    <div style={{backgroundImage: "url('https://images.xceed.me/blog/wp-content/uploads/2019/09/29121334/unum-festival-boat-stage-report-albania-xceed.jpg')"}} class="w-100 h-100 border-radius-lg bg-cover"></div>
                 </div>
                 <div class="col-sm-4 mb-sm-0 mb-3">
-                    <div style={{backgroundImage: "url('https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/nastuh.jpg')"}} class="w-100 h-100 border-radius-lg bg-cover"></div>
+                    <div style={{backgroundImage: "url('https://shqiptarja.com/uploads/1687500147_e7.jpeg')"}} class="w-100 h-100 border-radius-lg bg-cover"></div>
                 </div>
             </div>
         </div>
@@ -100,7 +95,6 @@ function About() {
                             </g>
                     </div>
                     <h3>What Users Say</h3>
-                    <p class="lead">We are constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play </p>
                 </div>
             </div>
             <div class="row">
@@ -114,7 +108,7 @@ function About() {
                             <h4 class="card-title">Jessica Davis</h4>
                             <h6 class="category text-info text-gradient">USA</h6>
                             <p class="card-description">
-                                "Don't walk behind me; I may not lead. Don't walk in front of me; I may not follow. Just walk beside me and be my friend."
+                            "Stasera is a must-have app for tourist looking to stay updated on the latest nightlife happenings. It's a one-stop platform that brings together a diverse range of events, from energetic nightclub parties to intimate live performances". 
                             </p>
                         </div>
                     </div>
@@ -129,7 +123,7 @@ function About() {
                             <h4 class="card-title">Sara Mendez</h4>
                             <h6 class="category text-info text-gradient">Portugal</h6>
                             <p class="card-description">
-                                "The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails."
+                            "BuzzLife is my go-to companion for a memorable night on the town whenever I visit Albania."
                             </p>
                         </div>
                     </div>
@@ -141,10 +135,40 @@ function About() {
                         </a>
 
                         <div class="card-body">
-                            <h4 class="card-title">Huan Atrocia</h4>
-                            <h6 class="category text-info text-gradient">Madrid</h6>
+                            <h4 class="card-title">Klevis Arapi</h4>
+                            <h6 class="category text-info text-gradient">Albania</h6>
                             <p class="card-description">
-                                "Do not go where the path may lead, go instead where there is no path and leave a trail."
+                                ""Stasera has revolutionized how I discover and experience nightlife events. With its extensive event listings and easy-to-use filters, I can effortlessly find events that match my music preferences."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-plain text-center">
+                        <a href="javascript:;">
+                            <img class="avatar avatar-xl shadow" src="https://www.agentur-scenario.de/wp-content/uploads/2021/12/Blerim_0005.jpg" />
+                        </a>
+
+                        <div class="card-body">
+                            <h4 class="card-title">Blerim Destani (Patala Bar Manager)</h4>
+                            <h6 class="category text-info text-gradient">Albania</h6>
+                            <p class="card-description">
+                                "BuzzLife has been a game-changer for me as a nightlife event manager. It's incredibly user-friendly, allowing me to effortlessly promote my events and reach a wider audience. The app's comprehensive event listings and powerful marketing tools have significantly boosted ticket sales. Highly recommended!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-plain text-center">
+                        <a href="javascript:;">
+                            <img class="avatar avatar-xl shadow" src="https://durreslajm.al/app/uploads/2021/11/251642092_1265607707290505_8509236810378612564_n.jpg" />
+                        </a>
+
+                        <div class="card-body">
+                            <h4 class="card-title">Sara Berisha (Promoter)</h4>
+                            <h6 class="category text-info text-gradient">Albania</h6>
+                            <p class="card-description">
+                            "It's a one-stop platform that brings together a diverse range of events, from energetic nightclub parties to intimate live performances."
                             </p>
                         </div>
                     </div>
