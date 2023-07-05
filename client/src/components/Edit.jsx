@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from 'axios';
 
 function Edit(props) {
-    const { id, update } = useParams();
+    const { id, update, setUpdate, socket } = useParams();
     const [validation, setValidation] = useState({})
     const navigate = useNavigate()
     const [title, setTitle] = useState("");
@@ -39,9 +39,19 @@ function Edit(props) {
           navigate (-1)
         })
         .catch((err) => {
+          console.log(err)
           setValidation(err.response.data.err.errors);;
         });
       }
+
+      const handleDelete = (eventId)=>{
+        axios.delete(`http://localhost:8000/event/${eventId}`)
+        .then (res=>{
+          navigate (-1)
+          socket.emit("toServer", res.data);
+        });
+      }
+      
 
   return (
 <div style={{background: "linear-gradient(#FC5C7D, #6A82FB)",  
@@ -56,28 +66,28 @@ function Edit(props) {
         <form onSubmit={handleSubmit}>
             <div>
                 <div className='p-2'>
-                  <input className='p-1 input-group' type="text" value={title} onChange = {(e)=>setTitle(e.target.value)}  /> <br />
+                  <input className='p-1 input-group' type="text" value={title} placeholder="Title" onChange = {(e)=>setTitle(e.target.value)}  /> <br />
                   <p style={{color:"#8F00FF"}}>{ validation.title? validation.title.message : ""}</p>
                 </div>
                 <div className='p-2'>
-                  <input className='p-1 input-group' type="text"  value={imageUrl} onChange = {(e)=>setImageUrl(e.target.value)}  /> <br />
+                  <input className='p-1 input-group' type="text" placeholder="Image/Poster Url" value={imageUrl} onChange = {(e)=>setImageUrl(e.target.value)}  /> <br />
                   <p style={{color:"#8F00FF"}}>{ validation.imageUrl? validation.imageUrl.message : ""}</p>
                 </div>
                 <div className='p-2'>
-                  <input className='p-1 input-group' type="text" value={guests} onChange = {(e)=>setGuests(e.target.value)} /> <br />
+                  <input className='p-1 input-group' type="text" placeholder="Guest/s" value={guests} onChange = {(e)=>setGuests(e.target.value)} /> <br />
                   <p style={{color:"#8F00FF"}}>{ validation.guests? validation.guests.message : ""}</p>
                 </div>
                 <div className='p-2'>
-                  <input className='p-1 input-group' type="datetime-local" id="meeting-time"  value={date} onChange = {(e)=>setDate(e.target.value)}  /> <br />
+                  <input className='p-1 input-group' type="datetime-local" id="meeting-time" placeholder="Date and Time" value={date} onChange = {(e)=>setDate(e.target.value)}  /> <br />
                   <p style={{color:"#8F00FF"}}>{ validation.date? validation.date.message : ""}</p>
                 </div>
                 <div className='p-2'>
-                  <input className='p-1 input-group' type="text"  value={price} onChange = {(e)=>setPrice(e.target.value)} /> <br />
+                  <input className='p-1 input-group' type="text" placeholder="Entry Fee" value={price} onChange = {(e)=>setPrice(e.target.value)} /> <br />
                   <p style={{color:"#8F00FF"}}>{ validation.price? validation.price.message : ""}</p>
                 </div>
             </div>
             <button type="submit" value="Submit" id="input-submit" class="btn btn-sm bg-gradient-primary btn-round m-2"> Submit </button>
-            <button type="button" class="btn btn-sm bg-gradient-primary btn-round m-2"> Delete </button>
+            <button type="button" class="btn btn-sm bg-gradient-primary btn-round m-2" onClick={()=>handleDelete(id)}> Delete </button>
         </form>
     </div>
   )
