@@ -24,3 +24,37 @@ module.exports.loginBusiness = (req, res) => {
       });
   };
 
+  module.exports.getOneBusiness =(req, res)=>{
+    Business.findOne ({_id:req.params.id})
+    .then ((business)=>{
+      return res.json(business)
+    })
+    .catch((err) => {
+        console.log(err)
+        res.json({ err });
+      });
+};
+
+module.exports.getAllBusinesses = (req, res) => {
+        Business.find()
+        .then(businesses => {
+            console.log(businesses); 
+            res.json(businesses);
+        })
+        .catch(err => {
+            console.log(err)
+            res.json({err})
+        })
+}; 
+
+module.exports.updateBusiness = (req, res)=>{
+    Business.findOneAndUpdate({_id:req.params.id}, req.body, {   
+        new: true,
+        runValidators: true})
+    .then((updated)=>{
+        res.json(updated)
+    })
+    .catch((err) => {
+        res.status(400).json({ err });    
+      });
+}; 

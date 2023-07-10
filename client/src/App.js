@@ -11,9 +11,11 @@ import CreateEvent from './components/CreateEvent';
 import Edit from './components/Edit';
 import About from './components/About';
 import Contact from './components/Contact';
+// import io from 'socket.io-client';
 
 function App() {
-const [update, setUpdate]=useState([]);
+const [update, setUpdate]=useState(false);
+// const [socket] = useState(() => io(':8000'));
 
 
   return (
@@ -33,7 +35,7 @@ const [update, setUpdate]=useState([]);
             <Route path='/create/event' element={ 
             <>
               <NavBar />
-              <CreateEvent update={update} setUpdate={setUpdate} /> 
+              <CreateEvent update={update} setUpdate={setUpdate}  /> 
               <Footer />
             </>
             } />

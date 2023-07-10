@@ -48,7 +48,7 @@ function Edit(props) {
         axios.delete(`http://localhost:8000/event/${eventId}`)
         .then (res=>{
           navigate (-1)
-          socket.emit("toServer", res.data);
+          // socket.emit("toServer", res.data);
         });
       }
       

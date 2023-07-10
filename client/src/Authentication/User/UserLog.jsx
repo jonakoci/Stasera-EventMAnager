@@ -7,6 +7,7 @@ function UserLog() {
     const [email, setEmail]= useState("");
     const [password, setPassword]= useState("");
     const [validation, setValidation] = useState()
+    const navigate = useNavigate()
 
     // const navigate = useNavigate()
 
@@ -17,7 +18,7 @@ function UserLog() {
             password
         })
         .then ((res)=>{
-            // navigate ("/home")
+            navigate ("/dashboard")
         })
         .catch((err)=>{
             console.log(err.response.data.error)
