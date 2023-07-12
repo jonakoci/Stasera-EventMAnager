@@ -17,6 +17,10 @@ function Dashboard(props) {
             console.log(err.res)
         })
     }, [update]);
+
+    const handleBook = ()=>{
+        alert ("A messagge has been sent to the event manager. You will be contacted shortly")
+    }
    
 
   return (
@@ -33,7 +37,7 @@ function Dashboard(props) {
                                     <p> Date: {event.date}</p>
                                     <p> Special Guests: {event.guests} </p>
                                     <p> Entry: {event.price} </p>
-                                    <button type="button" className="btn bg-gradient-primary m-4">Book</button>
+                                    <button type="button" className="btn bg-gradient-primary m-4" onClick={handleBook}>Book</button>
                                     <Link to={`/event/${event._id}`}> <button type="button" className="btn bg-gradient-primary m-4">Edit</button> </Link>
                                 </div>
                                 </div>

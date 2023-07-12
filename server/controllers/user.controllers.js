@@ -13,7 +13,7 @@ module.exports.createUser=(req, res) =>{
 };
 
 module.exports.getOneUser =(req, res)=>{
-  User.findOne ({_id:req.params.id})
+  User.findById ({_id:req.params.id})
   .then ((user)=>{
     return res.json(user)
   })

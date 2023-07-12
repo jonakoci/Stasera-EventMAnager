@@ -20,6 +20,7 @@ function UserReg() {
         })
         .then ((res)=>{
             console.log(res.data)
+            localStorage.setItem('userId',res.data.user._id)
             navigate ("/dashboard")
         })
         .catch((err)=>{

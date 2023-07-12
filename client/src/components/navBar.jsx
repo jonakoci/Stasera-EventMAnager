@@ -1,14 +1,14 @@
-import React, {useState } from 'react'
-import { Link,  useNavigate} from "react-router-dom";
+import React, {useState, useEffect } from 'react'
+import { Link,  useNavigate, useParams} from "react-router-dom";
 import axios from 'axios';
 import Profile from './Profile';
 // import '../styles/theme.css'
 
-function NavBar() {
-    const userId =localStorage.getItem('userId')
+function NavBar(props) {
+    const { id } = useParams();
     const navigate = useNavigate();
-    const [user, setUser]= useState([])
-    const [business, setBusiness]= useState([])
+    // const userId = localStorage.getItem('userId')
+    const [user, setUser] = useState([])
 
     const logOut = () => {
         console.log('logging out')
@@ -20,13 +20,11 @@ function NavBar() {
             navigate('/')
     }
 
-    // axios.get ('http://localhost:8000/users', 'http://localhost:8000/businesses' )
-    // .then (res =>{
-    //     console.log(res.data)
-    //     setUser(res.data)
-    //     setBusiness(res.data)
-    // })
-    // .catch (err => console.log(err))
+    useEffect(() => {
+        axios.get(`http://localhost:8000/users`)
+            .then(res => setUser(res.data))
+            .catch(err => console.log(err))
+    })
 
     return (
         <div>
@@ -53,7 +51,7 @@ function NavBar() {
                            
                             <li class="nav-item dropdown dropdown-hover mx-2">
                         <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuPages1" data-bs-toggle="dropdown" aria-expanded="false">
-                            Hello
+                            Hello 
                             <img src="https://demos.creative-tim.com/soft-ui-design-system/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-1" />
                         </a>
                         <div class="dropdown-menu dropdown-menu-animation dropdown-md p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages1">
@@ -62,12 +60,9 @@ function NavBar() {
                                 {user.role === 'user' ? 
                                 (<p>{user.username}</p> ) : (<p>{business.businessName}</p>)}
                                 </div> */}
-                                <a href="javascript:;" class="dropdown-item border-radius-md">
-                                    View Profile
-                                </a>
-                                <a href="javascript:;" class="dropdown-item border-radius-md">
-                                    Edit Profile
-                                </a>
+                                <Link to={`/user/${user._id}`} ><a href="javascript:;" class="dropdown-item border-radius-md">
+                                    View/Edit Profile
+                                </a> </Link> 
                                 <a onClick={logOut} href="javascript:;" class="dropdown-item border-radius-md">
                                     Logout
                                 </a>

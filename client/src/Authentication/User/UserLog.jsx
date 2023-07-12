@@ -19,6 +19,7 @@ function UserLog() {
         })
         .then ((res)=>{
             navigate ("/dashboard")
+            localStorage.setItem('userId',res.data.user._id)
         })
         .catch((err)=>{
             console.log(err.response.data.error)

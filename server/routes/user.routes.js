@@ -4,8 +4,8 @@ module.exports = (app) => {
     app.post ("/user/create", UserController.createUser); 
     app.post ("/user/login", UserController.loginUser);
     app.get('/users', UserController.getAllUsers);  
-    app.get ('user/:id', UserController.getOneUser);
-    app.put ('user/:id', UserController.updateUser)
+    app.get ('/user/:id', UserController.getOneUser);
+    app.put ('/user/:id', UserController.updateUser)
     
 };
 

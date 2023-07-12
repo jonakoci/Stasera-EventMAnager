@@ -9,7 +9,7 @@ function About() {
                 <div class="col-lg-6">
                     <h3 class="text-gradient text-primary mb-0 mt-2">Read More About Us</h3>
                     <h3>The most important</h3>
-                    <p>NightBuzz is your go-to platform for discovering <br /> and promoting the hottest happenings in town.</p>
+                    <p>Stasera is your go-to platform for discovering <br /> and promoting the hottest happenings in town.</p>
                 </div>
                 <div class="col-lg-6 mt-lg-0 mt-5 ps-lg-0 ps-0">
                     <div class="p-3 info-horizontal">
@@ -139,21 +139,6 @@ function About() {
                             <h6 class="category text-info text-gradient">Albania</h6>
                             <p class="card-description">
                                 ""Stasera has revolutionized how I discover and experience nightlife events. With its extensive event listings and easy-to-use filters, I can effortlessly find events that match my music preferences."
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-plain text-center">
-                        <a href="javascript:;">
-                            <img class="avatar avatar-xl shadow" src="https://www.agentur-scenario.de/wp-content/uploads/2021/12/Blerim_0005.jpg" />
-                        </a>
-
-                        <div class="card-body">
-                            <h4 class="card-title">Blerim Destani (Patala Bar Manager)</h4>
-                            <h6 class="category text-info text-gradient">Albania</h6>
-                            <p class="card-description">
-                                "BuzzLife has been a game-changer for me as a nightlife event manager. It's incredibly user-friendly, allowing me to effortlessly promote my events and reach a wider audience. The app's comprehensive event listings and powerful marketing tools have significantly boosted ticket sales. Highly recommended!"
                             </p>
                         </div>
                     </div>
